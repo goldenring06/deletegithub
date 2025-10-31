@@ -2,9 +2,6 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-# single_repo_max_scan_with_forks.sh
-# Safe mirror + unpack packs + recover deleted files + dump dangling blobs + TruffleHog + metadata
-# Now supports scanning forks automatically.
 
 # Color codes
 RED='\033[0;31m'
@@ -68,7 +65,6 @@ log "Output directory: $OUTPUT_DIR" "INFO"
 log "Threads (informational): $THREADS" "INFO"
 
 
-# --- Detect GitHub forks ---
 # --- Detect GitHub forks ---
 repos_to_scan=("$REPO_SRC")
 
